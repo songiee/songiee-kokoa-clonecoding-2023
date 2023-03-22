@@ -1,0 +1,57 @@
+.icon-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-row__icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*아이콘 가운데 정렬*/
+
+}
+
+.icon-row__icons i{
+    font-size: 35px; /* 아이콘 크기 크게  Class명 없이 i만 적용할경우 모든 아이콘이 다 커짐*/
+}
+
+.icon-row__icons span { 
+    margin-top: 10px; 
+}
+
+.more-suggestions__icons {
+    display: flex;
+
+}
+.more-suggestions__icon {
+    margin-right: 30px;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+
+.more-suggestions_icon_photo img{
+    display: block;
+    width:  60px;
+    height: 60px;
+    border: 3px solid yellow;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.more-suggestions_icon_photo span{
+    text-align: center;
+}
+
+.more-suggestions_icon_image{
+    width: 60px;
+    height: 60px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid yellow;
+    margin-bottom: 10px;
+    
+}
+

@@ -1,0 +1,77 @@
+.nav{
+    background-color:#F9F9FA;
+    position: fixed;
+    padding: 20px 40px;
+    border-top: 1px solid #DBDBDC;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+
+}
+.nav__a{
+    position: relative;
+    color: #2E363E;
+}
+
+@keyframes notificationAnimation {
+    0%{
+        transform: none;
+    }
+    50%{
+        transform:translateY(-5px) rotateY(360deg) ;
+    }
+
+    100%{
+        transform: none;
+
+    }
+}
+
+.nav__notification{
+    position: absolute ;
+    left: 15px;
+    bottom: 15px;
+    animation : notificationAnimation 2s ease-in-out infinite;
+
+    /* 해당 클래스에 position: absolute를 적용 후, right이동을 줄경우, body태그 기준으로 움직이기때문에,
+    absolute의 정의를 다시한번 살펴보면, 해당요소는 배치기준이 자신이 아니라 가장가까운 상위요소에서 찾습니다. 따로 지정을 안할경우, 가장 상위태그인 body의 
+    속성값으로 따라가기때문에 nav__notification 의 부모태그 nav__a태그에 relative값을 지정해줍니다.
+    */
+}
+
+@keyframes appearBtnAnimation {
+    from{
+
+        opacity: 0;
+    }
+    to{
+        transform:none;
+        opacity: 1;
+
+    }
+
+}
+
+.nav__btn {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: appearBtnAnimation 0.3s ease-in-out forwards; 
+    /*2,3,4q자식들이 애니메이션 실행 후 마지막 애니메이션이 실행될때 1.5초동안 애니메이션이 실행후 transform: translateY(50px);위치에서 끝나기때문에 해당 코드는 버튼안으로 넣어준다.*/
+}
+
+.nav__btn:nth-child(2){
+    animation-delay:0.3s ;
+}
+
+.nav__btn:nth-child(3){
+    animation-delay:0.6s ;
+}
+.nav__btn:last-child{
+    animation-delay:0.9s ;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+@import "reset.css";
+@import "components/status-bar.css";
+@import "variables.css";
+
+
+
+/* Screen */
+@import "screen/login.css";
+@import "screen/friend.css";
+@import "screen/find.css";
+@import "screen/more.css";
+@import "screen/alt-screen-header.css";
+@import "screen/setting.css";
+@import "screen/chat.css";
+
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-raw.css";
+@import "components/no-mobile.css";
+
+
+
+body{
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    height: 1000vh;
+}
+
+.main-screen{
+    padding: 0px var( --horizontal-space);
+}

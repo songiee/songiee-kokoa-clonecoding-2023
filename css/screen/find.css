@@ -1,0 +1,148 @@
+.fine__icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-icons__icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*아이콘 가운데 정렬*/
+
+}
+
+.find-icons__icon i{
+    font-size: 35px; /* 아이콘 크기 크게  Class명 없이 i만 적용할경우 모든 아이콘이 다 커짐*/
+}
+
+.find-icons__icon span { 
+    margin-top: 10px; 
+
+}
+
+.recommend-friends{
+    margin: 25px 0px;
+    padding: 25px 0px;
+    border-top: var(--main-bottom);
+    border-bottom: var(--main-bottom);
+    
+}
+
+.recommended-friends__title{
+    font-size: 12px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.recommend-friends span{
+    margin: 110px 0px;
+    display: block;
+    text-align: center;
+    color: var(--gray);
+    font-size: 18px;
+}
+
+.open-chat__header{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.open-chat__header span{
+    opacity: 0.6;
+}
+
+.open-post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 플렉스상태이기 때문에 이미지와 텍스트가 나란히 있지못함 */
+
+}
+
+.open-post__title{
+    font-weight: 600;
+    margin-bottom: 5px; /*굵은글씨와 회색글자사이의 간격 */
+}
+
+.open-post__hashtags{
+    text-transform: uppercase; /*모든 글자를 대문자로.*/
+    opacity: 0.6;
+}
+
+.open-post__members{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.open-post__members img{
+    width: 15x;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.opne-post__member-count{
+    opacity: 0.5;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.open-post__members .divider{ /* open-post__members 안에 있는 divider만 적용 divider: 커서모양처럼 생긴부분*/
+    width: 1px;
+    height: 15px;
+    margin: 0 5px;
+    background-color:var(--yellow) ;
+}
+
+.open-post__member-status{
+    color:#FF91D4 ;
+}
+
+.open-post__photo{
+    position: relative;
+}
+
+.open-post__photo img{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+
+}
+
+.open-post__heart-count{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 9px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    bottom: 11px;
+    right: 12px;
+    font-size: 16px;
+}
+
+.open-post__heart-count span{
+    margin-left:10px;
+
+}
+
+@keyframes heartbeat{
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        color:white;
+        transform: none;
+    }
+}
+.open-post__heart-count:hover i {
+    will-change: transform;
+    animation: heartbeat 1s linear infinite ;
+}
